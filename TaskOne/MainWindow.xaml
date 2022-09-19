@@ -1,0 +1,66 @@
+﻿<Window x:Class="TaskOne.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskOne"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="900"
+        Background="LightSteelBlue">
+    <Grid>
+        <!--Add a module section-->
+        <Label x:Name="lbCode" Content="Module Code" HorizontalAlignment="Left" Margin="19,65,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbName" Content="Module Name" HorizontalAlignment="Left" Margin="19,120,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbCred" Content="Number of Credits" HorizontalAlignment="Left" Margin="19,173,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbHours" Content="Class hours per week" HorizontalAlignment="Left" Margin="19,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.211,-2.733"/>
+        <TextBlock Text="Add a Module" FontStyle="Italic" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="19,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbName" HorizontalAlignment="Left" Margin="238,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbCred" HorizontalAlignment="Left" Margin="238,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbHour" HorizontalAlignment="Left" Margin="238,244,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbCode" HorizontalAlignment="Left" Margin="238,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        
+        <!--Creation of DataGrid-->
+        <DataGrid x:Name="dg" Margin="504,19,19,453">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform>
+
+                    </ScaleTransform>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+            <!--Binding-->
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Module Code" Binding="{Binding ModCode}"/>
+                <DataGridTextColumn Header="Module Name" Binding="{Binding ModName}"/>
+                <DataGridTextColumn Header="Credits" Binding="{Binding NumOfCredits}"/>
+                <DataGridTextColumn Header="Class Hours" Binding="{Binding HoursPerWeek}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+       
+        <!--Filter the modules section-->
+        <ComboBox x:Name="combob1" HorizontalAlignment="Left" Margin="654,299,0,0" VerticalAlignment="Top" Width="227" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Ascending Order by Module Name"/>
+            <ComboBoxItem Content="Descending Order by hours per week"/>
+        </ComboBox>
+        <Label Content="Filter your modules" HorizontalAlignment="Left" Margin="504,297,0,0" VerticalAlignment="Top"/>
+        <Button Content="Add Module" HorizontalAlignment="Left" Margin="10,282,0,0" VerticalAlignment="Top" Height="28" Width="140" Click="Button_Click_2"/>
+        
+        <!--Separator to separate the window-->
+        <Separator HorizontalAlignment="Center" Height="39" Margin="0,328,0,0" VerticalAlignment="Top" Width="862" Background="Black"/>
+
+        <!--Self Study section-->
+        <Label x:Name="lbSelfstudy" Content="Self-Study Info" FontStyle="Italic" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbModName" HorizontalAlignment="Left" Margin="238,431,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbModName_SelectionChanged"/>
+        <Label x:Name="lbWeeks" Content="Number of weeks this semester" HorizontalAlignment="Left" Margin="10,466,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbStart" Content="Semester start date" HorizontalAlignment="Left" Margin="10,509,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dpStudyDate" HorizontalAlignment="Left" Margin="238,550,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbStudy" Content="Date you studied" HorizontalAlignment="Left" Margin="10,549,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbStudyHours" HorizontalAlignment="Left" Margin="238,592,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbInfoDisplay" FontStyle="Italic" FontSize="13" FontWeight="Bold" HorizontalAlignment="Left" Margin="416,431,0,0" VerticalAlignment="Top" Height="115" Width="465"/>
+        <DatePicker x:Name="dpStart" HorizontalAlignment="Left" Margin="238,510,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbWeeks" HorizontalAlignment="Left" Margin="238,470,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbMod" Content="Select your module" HorizontalAlignment="Left" Margin="10,429,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbStudyHours" Content="Number of hours you studied for" HorizontalAlignment="Left" Margin="10,588,0,0" VerticalAlignment="Top"/>
+        <Button Content="Calculate Self-Study Hours" HorizontalAlignment="Left" Margin="10,650,0,0" VerticalAlignment="Top" Height="35" Width="157" Click="Button_Click_3"/>
+    </Grid>
+</Window> 
