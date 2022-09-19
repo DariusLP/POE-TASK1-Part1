@@ -10,8 +10,8 @@ Task 1 for PROG6212 POE
 ***
 ### General Info
 I am tasked to create a program that will help organize a user's time management in their classes. The program will take values such as the name of the modules, hours spent studying the modules, etc and use those values to do specific calculations to help the user manange their time for studying. This program is created by Darius Lynton Paul.
-#### Screenshot of the Program!
-[Screenshot (104)](https://user-images.githubusercontent.com/104988211/191054849-66882bd6-1e9c-4a45-b5ac-961726f60a43.png)
+#### Screenshot of the Program
+![Screenshot (104)](https://user-images.githubusercontent.com/104988211/191054849-66882bd6-1e9c-4a45-b5ac-961726f60a43.png)
 ***
 ### Software
 * [Microsoft Visual Studio 2022] (Version no: 17.2)
@@ -49,8 +49,8 @@ _Please note: Download all the files from the TaskOne folder to make sure the pr
 * Name: Darius Lynton Paul
 * Student No: ST10084349
 * Email: dariuslpaul@gmail.com
-* Link to GIT Repository: https://github.com/DariusLP/POE-TASK1-Part1.git
-* Link to Kanban board: 
+* Link to GIT Repository: https://github.com/DariusLP/PROG6212-POE-TASK1.git
+* Link to Kanban board: https://github.com/users/DariusLP/projects/4
 ***
 ### FAQs
 1. **How do i filter my modules?**
@@ -63,4 +63,4 @@ _After inputting the required information and pressing the 'Calculate Self-Study
 ### Code Attributions
 1. https://www.c-sharpcorner.com/UploadFile/72d20e/concept-of-linq-with-C-Sharp/ - used to implement linq in the project
 2. https://www.tutorialsteacher.com/csharp/csharp-list - used to create a list 
-3.  https://learn.microsoft.com/en-us/dotnet/core/tutorials/library-with-visual-studio?pivots=dotnet-6-0 - used to create a class library
+3. https://learn.microsoft.com/en-us/dotnet/core/tutorials/library-with-visual-studio?pivots=dotnet-6-0 - used to create a class library
